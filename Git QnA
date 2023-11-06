@@ -93,25 +93,21 @@ Here are QnA on git:
 30. **How do you discover if a branch has already been merged or not?**
     - You can use the `git branch --merged` and `git branch --no-merged` commands to check if a branch has been merged or not.
 
-31. **How do you install Git on Windows?**
-    - To install Git on Windows, download the Git Windows installer, complete the installation process, and configure your Git username and email.
 
-32. **How do you install Git on Linux/Debian/Ubuntu?**
-    - To
-
- install Git on Linux/Debian/Ubuntu, use the `apt-get` package manager to install Git, and configure your Git username and email.
-
-33. **How do you install Git on Fedora?**
-    - To install Git on Fedora, use the `dnf` or `yum` package manager to install Git, and configure your Git username and email.
-
-34. **How do you install Git on Mac using Mac Installer?**
-    - To install Git on Mac, download the Git installer for Mac, complete the installation, and configure your Git username and email.
-
-35. **How do you integrate Git with Jenkins?**
+31. **How do you integrate Git with Jenkins?**
     - To integrate Git with Jenkins, install the Git plugin, configure it in the Jenkins dashboard, and set up your Jenkins jobs to use Git repositories.
 
-36. **What do “hooks” consist of in Git?**
+32. **What do “hooks” consist of in Git?**
     - Git hooks are shell scripts located in the `.git/hooks` directory that are triggered when certain Git commands are run.
 
-37. **What is the difference between Git and GitHub?**
+33. **What is the difference between Git and GitHub?**
     - Git is a version control system that helps you manage source code changes, while GitHub is a cloud-based hosting service for Git repositories, making it easier to access and collaborate on code through the internet.
+
+34. difference-between-git-push-origin-and-git-push-origin-master
+    - Git Push Origin pushes all the branches to the main branch. 
+    - Git Push Origin Master pushes your master branch to the origin.
+35. Difference Between Merging and Rebasing
+    - Git Merge merges two branches to create a “feature” branch.
+         Single line command is: git merge feature main
+    - Git Rebase rebases the feature branch to add the feature branch to the main branch.
+          Single line command is: git rebase main
