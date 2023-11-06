@@ -2,3 +2,122 @@
 AIO for all cheatsheets
 
 Git : https://www.geeksforgeeks.org/git-tutorial/?ref=lbp
+
+
+Here are QnA on git:
+
+1. **What is the difference between git pull and git fetch?**
+   - `git fetch` only downloads new data from a remote repository, but it doesn’t integrate any of the downloaded data into your working files. All it does is provide a view of this data.
+   - `git pull` downloads as well as merges the data from a remote repository into your local working files. It may also lead to merge conflicts if your local changes are not yet committed. Use the `git stash` command to hide your local changes.
+
+2. **How do you revert a commit that has already been pushed and made public?**
+   - One or more commits can be reverted through the use of `git revert`. This command, in essence, creates a new commit with patches that cancel out the changes introduced in specific commits.
+
+3. **What is a conflict in git and how can it be resolved?**
+   - A conflict arises when more than one commit that has to be merged has some change in the same place or same line of code. To resolve the conflict in git, edit the files to fix the conflicting changes and then add the resolved files by running `git add`. After that, to commit the repaired merge, run `git commit`.
+
+4. **What is the role of the git clean command?**
+   - The main function of the `git clean` command is to remove the untracked files from the working directory.
+
+5. **What do you mean by “git cherry-pick”?**
+   - If you have committed a change into the wrong branch, you can use the “git cherry-pick” command to apply a commit from one branch to another branch.
+
+6. **Can you tell the differences between git revert and git reset?**
+   - `git revert` is used for creating a new commit that undoes the changes of the previous commit.
+   - `git reset` operates on the commit history, git index, and the working directory, undoing local changes in the git repository.
+
+7. **What is the purpose of the git pull origin master?**
+   - The command `git pull origin master` gets all changes from the master branch and merges them into the local branch.
+
+8. **Explain conflict in Git.**
+   - A conflict in Git arises when two different branches make edits to the same line in the same file or when one branch deletes a file while another edits the same file.
+
+9. **What does a git stash command do?**
+   - The `git stash` command temporarily shelve changes in your working copy, allowing you to work on something else and then return to the first project.
+
+10. **What does a git push command do?**
+    - This command uploads local repository content to a remote repository, transferring the commits from the local to the remote repo.
+
+11. **What does a git pull command do?**
+    - This command fetches and downloads content from the remote repo, immediately updating the local repo to match the content.
+
+12. **What does git pull origin master do?**
+    - The `git pull origin master` command integrates all master branch changes into the local branch.
+
+13. **What is the difference between git pull and git fetch?**
+    - The major differences between `git pull` and `git fetch` include that `git fetch` only downloads new data from a remote repository without integrating it, while `git pull` both downloads new data and integrates it into the local working copy.
+
+14. **List the commands for deleting a branch.**
+    - To delete a local branch, use `git branch -d <branch-name>`.
+    - To delete a remote branch, use `git push origin --delete <branch-name>`.
+
+15. **What does a git stash apply command do?**
+    - The `git stash apply` command re-applies previously stashed changes, restoring them to the working copy.
+
+16. **What does a git diff command do?**
+    - The `git diff` command is used to compare differences between commits, branches, and files.
+
+17. **What is the difference between git diff and git status?**
+    - `git diff` is used to check changes between commits, while `git status` displays the difference between the working directory and the index.
+
+18. **What is git reflog?**
+    - Git reflog keeps track of updates to branch tips in the local repository.
+
+19. **What is a bare repository?**
+    - A bare repository is created without a working tree, typically used as a centralized, shared repository.
+
+20. **How do you recover a deleted branch?**
+    - To recover a deleted branch, you can use `git reflog` to find the commit that was the head of the deleted branch and recreate the branch from there.
+
+21. **How can you enter a merge in the conflicted stage?**
+    - To resolve merge conflicts, you need to open the conflicted files, make necessary changes, use `git add` to stage the changes, and then create a new commit using `git commit`.
+
+22. **How do you check files that have changes in a particular commit?**
+    - You can use the `git diff-tree` command to check which files were modified in a specific commit.
+
+23. **How do you create an additional commit or amend it in case of broken commits?**
+    - To create an additional commit or amend a broken commit, you can use the `git commit` command with the `--amend` option to modify the last commit or create a new commit.
+
+24. **How can you remove a file from the git index without removing it from the local file system?**
+    - You can use the `git reset` command to remove a file from the Git index while keeping it in the local file system.
+
+25. **How do you revert an already-pushed bad commit?**
+    - You can either fix the bad changes and create a new commit, or you can create new commits that revert the changes in the bad commit using `git revert`.
+
+26. **What is the git cherry-pick command?**
+    - The `git cherry-pick` command allows you to apply a specific commit from one branch to another.
+
+27. **How do you find a commit that broke something after a merge operation?**
+    - You can use the `git bisect` command to find the commit that introduced a bug after a merge operation.
+
+28. **What are git reset --mixed and git merge --abort commands?**
+    - `git reset --mixed` is used to undo working directory and git index changes, while `git merge --abort` is used to stop the merge process and return to the state before the merge occurred.
+
+29. **How do you squash the last N commits into a single commit?**
+    - You can squash the last N commits into a single commit using `git reset` and `git commit` commands.
+
+30. **How do you discover if a branch has already been merged or not?**
+    - You can use the `git branch --merged` and `git branch --no-merged` commands to check if a branch has been merged or not.
+
+31. **How do you install Git on Windows?**
+    - To install Git on Windows, download the Git Windows installer, complete the installation process, and configure your Git username and email.
+
+32. **How do you install Git on Linux/Debian/Ubuntu?**
+    - To
+
+ install Git on Linux/Debian/Ubuntu, use the `apt-get` package manager to install Git, and configure your Git username and email.
+
+33. **How do you install Git on Fedora?**
+    - To install Git on Fedora, use the `dnf` or `yum` package manager to install Git, and configure your Git username and email.
+
+34. **How do you install Git on Mac using Mac Installer?**
+    - To install Git on Mac, download the Git installer for Mac, complete the installation, and configure your Git username and email.
+
+35. **How do you integrate Git with Jenkins?**
+    - To integrate Git with Jenkins, install the Git plugin, configure it in the Jenkins dashboard, and set up your Jenkins jobs to use Git repositories.
+
+36. **What do “hooks” consist of in Git?**
+    - Git hooks are shell scripts located in the `.git/hooks` directory that are triggered when certain Git commands are run.
+
+37. **What is the difference between Git and GitHub?**
+    - Git is a version control system that helps you manage source code changes, while GitHub is a cloud-based hosting service for Git repositories, making it easier to access and collaborate on code through the internet.
